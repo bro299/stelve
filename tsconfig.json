@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "target": "esnext",                     // Menentukan versi ECMAScript yang akan digunakan
+      "module": "esnext",                     // Menentukan sistem modul yang digunakan
+      "moduleResolution": "node",             // Menentukan bagaimana modul akan di-resolve
+      "esModuleInterop": true,                // Memungkinkan interoperabilitas antara CommonJS dan ES6 modules
+      "skipLibCheck": true,                   // Melewati pemeriksaan tipe pada file deklarasi (dipercepat)
+      "forceConsistentCasingInFileNames": true, // Menjamin konsistensi casing dalam nama file
+      "strict": true,                         // Mengaktifkan semua opsi pemeriksaan ketat
+      "noImplicitAny": true,                  // Menolak variabel dengan tipe `any`
+      "noImplicitThis": true,                 // Menolak `this` yang tidak dideklarasikan secara eksplisit
+      "noUnusedParameters": true,             // Menolak parameter yang tidak digunakan
+      "noUnusedLocals": true,                 // Menolak variabel lokal yang tidak digunakan
+      "noEmitOnError": true,                  // Tidak menghasilkan output jika ada kesalahan
+      "sourceMap": true,                      // Menghasilkan peta sumber untuk debug
+      "outDir": "./dist",                     // Menentukan direktori output untuk file yang dikompilasi
+      "rootDir": "./src",                     // Menentukan direktori root untuk file sumber
+      "baseUrl": ".",                         // Menentukan basis dari jalur resolusi modul
+      "paths": {
+        "$lib/*": ["src/lib/*"],              // Alias jalur untuk modul di dalam direktori src/lib
+        "$routes/*": ["src/routes/*"],        // Alias jalur untuk modul di dalam direktori src/routes
+        "$schema/*": ["src/schema/*"]         // Alias jalur untuk modul di dalam direktori src/schema
+      }
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.svelte"], // Menyertakan semua file TypeScript dan Svelte
+    "exclude": ["node_modules", "dist"] // Mengecualikan node_modules dan direktori output
+  }
+  
